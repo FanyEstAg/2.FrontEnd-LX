@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Bloom - Hacer pedido</title>x
+    <style>
+        header {
+            background-color: rgb(241, 205, 240);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: rgb(134, 9, 134);
+        }
+
+        footer {
+            background-color: rgb(148, 121, 156);
+            padding: 10px;
+            text-align: center;
+            color: rgb(73, 6, 68);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo.jpg" alt="Logo" width="100px" height="100px">
+        <h1>Forever Bloom Pasteleria</h1>
+        <h2>"Vive el placer de lo delicioso"</h2>
+    </header>
+
+
+    <center>
+        <h3>¡HAZ TU PEDIDO!</h3>
+        <p>En nuestra página de inicio pudiste conocer nuestras opciones de personalización, aquí podrás realizar tu
+            pedido de acuerdo a tus preferencia.
+        </p>
+        <p>Recuerda que solo puedes elegir 1 sabor de bizcocho, relleno y cuebierta; 2 toppings y los extras que quieras
+        </p>
+    </center>
+    <p>El proceso para relaizar tu pedido es le siguiente:
+
+    <ol>
+        <li>Elegir el sabor del bizcocho de tu pastel</li>
+        <li>Elegir el sabor del relleno de tu pastel</li>
+        <li>Elegir el tipo de cubierta</li>
+        <li>Elegir los toppings de tu preferencia</li>
+        <li>Ingresar tus datos de contacto</li>
+        <li>Enviar tu pedido</li>
+    </ol>
+    </p>
+
+
+    <form action="/accion.js" id="form1" method="post">
+        <h4>Elige el bizcocho:</h4>
+        <select id="bizcocho" name="bizcocho">
+            <option value="choco">Chocolate</option>
+            <option value="vainilla">Vainilla</option>
+            <option value="redvelvet">RedVelvet</option>
+        </select>
+
+
+        <h4>Elige el relleno:</h4>
+
+        <input type="radio" id="frutas" name="relleno" value="Frutas">
+        <label for="frutas">Frutas (piña, fresa y durazno)</label><br>
+        <input type="radio" id="3choco" name="relleno" value="Tres chocolates">
+        <label for="3choco">Tres Chocolates</label><br>
+        <input type="radio" id="zarza" name="relleno" value="Zarzamora con queso">
+        <label for="zarza">Zarzamora con quesos</label><br>
+        <input type="radio" id="manjar" name="relleno" value="Manjar">
+        <label for="manjar">Manjar</label><br>
+        <input type="radio" id="fresas" name="relleno" value="Fresas">
+        <label for="fresas">Fresas</label><br>
+        <input type="radio" id="oreo" name="relleno" value="Oreo">
+        <label for="oreo">Tres Chocolates</label>
+
+        <h4>Elige la cubierta:</h4>
+        <input type="radio" id="crema" name="cubierta" value="Crema"">
+        <label for=" choco">Crema pastelera</label><br>
+        <input type="radio" id="cchoco" name="cubierta" value="Chocolate">
+        <label for="cchoco">Cubierta de chocolate</label><br>
+        <input type="radio" id="mermelada" name="cubierta" value="Mermelada">
+        <label for="mermelada">Mermelada</label><br>
+        <input type="radio" id="fondant" name="cubierta" value="Fondant">
+        <label for="fondant">Fondant</label>
+        <br><br>
+
+        <h4>Elige los toppings</h4>
+        <input type="checkbox" id="toppfrutas" name="toppfrutas" value="Frutas">
+        <label for="toppfrutas">Frutas (durazno, kiwi y fresas)</label><br>
+        <input type="checkbox" id="toppdurazno" name="toppdurazno" value="Durazno">
+        <label for="toppdurazno">Durazno</label><br>
+        <input type="checkbox" id="toppfresas" name="toppfresas" value="Fesas">
+        <label for="toppfresas">Fresas</label><br>
+        <input type="checkbox" id="toppchoco" name="toppchoco" value="Chocolate">
+        <label for="toppchoco">Ralladura de chocolate</label><br>
+        <input type="checkbox" id="topporeo" name="topporeo" value="Oreo">
+        <label for="topporeo">Galletas Oreo</label><br>
+        <input type="checkbox" id="toppflores" name="toppflores" value="Flores">
+        <label for="toppflores">Flores de chocolate</label><br>
+        <br><br>
+
+        <h4>Elige elementos extra</h4>
+        <input type="checkbox" id="ex_velas" name="ex_velas" value="Velas">
+        <label for="ex_velas">Velas</label><br>
+        <input type="checkbox" id="ex_dedicatoria" name="ex_dedicatoria" value="Dedicatoria">
+        <label for="ex_dedicatoria">Dedicatoria</label><br>
+        <input type="checkbox" id="ex_fondant" name="ex_fondant" value="Fondant">
+        <label for="ex_fondant">Figuras de fondant</label><br>
+        <input type="checkbox" id="ex_carteler" name="ex_carteler" value="Cartelitos">
+        <label for="ex_carteler">Cartelitos</label><br>
+        <br>
+        <hr>
+
+        <h4>Ingresa tus datos de contacto</h4>
+        <!-- Nombre, Teléfono, Correo Electrónico, Descripción general del pastel-->
+
+        <label for="input_nombre"> Nombre: </label>
+        <input type="text" id="input_nombre" name="input_nombre"><br><br>
+
+        <label for="input_tel">Teléfono fijo o celular: </label>
+        <input type="tel" id="input_tel" name="input_tel" maxlength="10" placeholder="A 10 dígitos"><br><br>
+
+        <label for="input_correo">Correo electrónico: </label>
+        <input type="email" id="input_correo" name="input_correo"><br><br>
+
+        <label for="input_descri"> Descripción general del pastel: </label>
+        <input type="text" id="input_descri" name="input_descri"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+    <br><br>
+
+    <footer>
+        <h3>Forever Bloom</h3>
+        <img src="https://i.imgur.com/Zm64opH.png" alt="fb" width="30px" height="30px">
+        <p>@AForeverBloom</p>
+        <p>Tel: 231 149 1022</p>
+        <p>Dirección: Xoloateno 73800, Teziutlán, Puebla</p>
+        <p>Horarios de atención: Lunes a viernes de 9am a 8pm</p>
+    </footer>
+
+
+</body>
+
+</html>
